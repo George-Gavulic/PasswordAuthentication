@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class PasswordAuthentication {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
@@ -37,13 +37,13 @@ public class App {
                 System.out.println("Numbers = YES");
                 meetsConditions++;
             } else {    System.out.println("Numbers = NO");   }
+
+            if (meetsConditions >= 3) {
+                System.out.println("Password meets requirements.");
+            } else {
+                System.out.println("Password does not meet all requirements.");
+            }
         }
         input.close();
-
-        if (meetsConditions >= 3) {
-            System.out.println("Password meets requirements.");
-        } else {
-            System.out.println("Password does not meet all requirements.");
-        }
     }
 }
